@@ -11,5 +11,5 @@ init:
 install:
 
 build_script:
-  - '%CYG_BASH% -lc "source dnvm.sh; dnvm"'
+  - '%CYG_BASH% -lc "cd $APPVEYOR_BUILD_FOLDER; source dnvm.sh; dnvm"'
 
