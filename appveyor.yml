@@ -5,7 +5,7 @@ test: off
 deploy: off
 
 enviroment:
-	CYG_BASH: C:\cygwin\bin\bash
+  CYG_BASH: C:\cygwin\bin\bash
 
 
 init:
