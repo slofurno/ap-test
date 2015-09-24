@@ -1,4 +1,4 @@
-version: "{build}"
+
 os: Windows Server 2012 R2
 
 test: off
@@ -10,9 +10,6 @@ init:
 
 install:
   - cinst cygwin -y
-  - cd %APPVEYOR_BUILD_FOLDER%
-  - "%LOCALAPPDATA%/atom/bin/apm install"
 
 build_script:
-  - cd %APPVEYOR_BUILD_FOLDER%
-  - "%LOCALAPPDATA%/atom/bin/apm test --path %LOCALAPPDATA%/atom/bin/atom.cmd"
+
