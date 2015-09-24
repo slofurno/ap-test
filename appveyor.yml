@@ -1,15 +1,12 @@
-
 os: Windows Server 2012 R2
 
 test: off
 deploy: off
 
-enviroment:
+environment:
   CYG_BASH: C:\cygwin\bin\bash
 
-
 init:
-
 
 install:
   - '%CYG_BASH% -lc "echo HEY"'
