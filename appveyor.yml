@@ -9,7 +9,7 @@ environment:
 init:
 
 install:
-  - '%CYG_BASH% -lc "echo HEY"'
 
 build_script:
+  - '%CYG_BASH% -lc "source dnvm.sh; dnvm"'
 
