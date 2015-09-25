@@ -641,7 +641,7 @@ dnvm()
                     fi
                 done
                 
-                echo "MADE IT THIS FAR"
+                echo "MADE IT THIS $acceptSudo FAR"
 
                 if [[ $exist != 1 ]]; then
                     __dnvm_download "$runtimeFullName" "$downloadUrl" "$runtimeFolder" "$force" "$acceptSudo"
