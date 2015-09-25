@@ -784,7 +784,7 @@ dnvm()
         "alias" )
             [[ $# -gt 7 ]] && __dnvm_help && return
 
-            [[ ! -e "$_DNVM_ALIAS_DIR/" ]] && mkdir "$_DNVM_ALIAS_DIR/" > /dev/null
+            [[ ! -d "$_DNVM_ALIAS_DIR/" ]] && mkdir "$_DNVM_ALIAS_DIR/" > /dev/null
 
             if [[ $# == 1 ]]; then
                 echo ""
