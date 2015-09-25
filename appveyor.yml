@@ -5,6 +5,7 @@ deploy: off
 
 environment:
   CYG_BASH: C:\cygwin\bin\bash
+  CYGWIN: NONTSEC
 
 init:
 
