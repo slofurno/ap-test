@@ -10,9 +10,9 @@ environment:
 init:
 
 install:
-  - '%CYG_BASH% -lc "cd $APPVEYOR_BUILD_FOLDER; ls -Al"'
+  - '%CYG_BASH% -lc "curl -L -D - https://www.myget.org/F/aspnetvnext/api/v2/package/dnx-coreclr-win-x64/1.0.0-beta8-15654 -o /cygdrive/c/Users/appveyor/.dnx/runtimes/dnx-coreclr-win-x64.1.0.0-beta8-15654/dnx-coreclr-win-x64.1.0.0-beta8-15654.nupkg -#"'
 
 
 build_script:
-  - '%CYG_BASH% -lc "cd $APPVEYOR_BUILD_FOLDER; source dnvm.sh; dnvm upgrade; mkdir $DNX_USER_HOME/alias; dnvm install -r coreclr -arch x64 latest -OS win -u; dnvm list; cat err.txt; ls -Al; cd $DNX_USER_HOME; ls -Al; cd runtimes; ls -Al; cd dnx-coreclr-win-x64.1.0.0-beta8-15654; ls -A; echo what; cd ..; ls -A"'
+  - '%CYG_BASH% -lc "cd $APPVEYOR_BUILD_FOLDER; source dnvm.sh; dnvm upgrade; mkdir $DNX_USER_HOME/alias; dnvm install -r coreclr -arch x64 latest -OS win -u -p; dnvm list; cat err.txt; ls -Al; cd $DNX_USER_HOME; ls -Al; cd runtimes; ls -Al; cd dnx-coreclr-win-x64.1.0.0-beta8-15654; ls -A; echo what; cd ..; ls -A"'
  
