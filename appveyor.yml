@@ -13,6 +13,6 @@ install:
   - '%CYG_BASH% -lc "mkdir /cygdrive/c/Users/appveyor/.dnx/"'
 
 build_script:
-  - '%CYG_BASH% -lc "cd $APPVEYOR_BUILD_FOLDER; source dnvm.sh; dnvm install -r coreclr -arch x64 1.0.0-beta8-15618 -OS win -u; echo installed"'
-  - '%CYG_BASH% -lc "cd $APPVEYOR_BUILD_FOLDER; source dnvm.sh; dnvm use -r coreclr -arch x64 1.0.0-beta8-15618 -p; dnvm list; dnu.cmd --help"'
+  - '%CYG_BASH% -lc "cd $APPVEYOR_BUILD_FOLDER; source dnvm.sh; dnvm install -r coreclr -arch x64 latest -OS win -u; dnvm list; uname -a"'
+
 
