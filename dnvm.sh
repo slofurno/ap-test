@@ -277,7 +277,7 @@ __dnvm_download() {
         fi
     fi
     echo "Downloading $runtimeFullName from $DNX_ACTIVE_FEED"
-    echo "Download: $downloadUrl"
+    echo "Download: $downloadUrl, dest: $runtimeFile"
 
     local httpResult=$($useSudo curl -L -D - "$downloadUrl" -o "$runtimeFile" -# | grep "^HTTP/1.1" | head -n 1 | sed "s/HTTP.1.1 \([0-9]*\).*/\1/")
 
