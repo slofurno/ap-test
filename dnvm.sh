@@ -667,11 +667,11 @@ dnvm()
                   echo "$runtimeFullName already installed"
                 else
                   local useSudo=
-                  mkdir -p "$runtimeFolder" > /dev/null 2>&1
+                  mkdir -p "$runtimeFolder" > err.txt 2>&1
                   if [ ! -d $runtimeFolder ]; then
                      if ! __dnvm_promptSudo $acceptSudo ; then
                          useSudo=sudo
-                         sudo mkdir -p "$runtimeFolder" > /dev/null 2>&1 || return 1
+                         sudo mkdir -p "$runtimeFolder" > err.txt 2>&1 || return 1
                      else
                          return 1
                      fi
