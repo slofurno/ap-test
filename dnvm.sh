@@ -743,7 +743,8 @@ dnvm()
             echo "$versionOrAlias, $runtime, $arch, $(__dnvm_current_os)"
             local runtimeFullName=$(__dnvm_requested_version_or_alias "$versionOrAlias" "$runtime" "$arch" "$(__dnvm_current_os)")
             echo "fullname : $runtimeFullName"
-            local runtimeBin=$(__dnvm_locate_runtime_bin_from_full_name "$runtimeFullName")
+            local runtimeBin="/cygdrive/c/Users/appveyor/.dnx/runtimes/dnx-coreclr-win-x64.1.0.0-beta8-15654/bin" 
+            #$(__dnvm_locate_runtime_bin_from_full_name "$runtimeFullName")
             echo "bin : $runtimeBin"
             if [[ -z $runtimeBin ]]; then
                 echo "Cannot find $runtimeFullName, do you need to run '$_DNVM_COMMAND_NAME install $versionOrAlias'?"
