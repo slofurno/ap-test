@@ -371,7 +371,7 @@ __dnvm_locate_runtime_bin_from_full_name() {
     local runtimeFullName=$1
 	
     for v in `echo $DNX_HOME | tr ":" "\n"`; do
-        if [ -e "$v/runtimes/$runtimeFullName/bin" ]; then
+        if [ -d "$v/runtimes/$runtimeFullName/bin" ]; then
             echo "$v/runtimes/$runtimeFullName/bin" && return
         fi
     done
