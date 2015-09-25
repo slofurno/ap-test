@@ -304,7 +304,7 @@ __dnvm_unpack() {
         return 1
     fi
 
-    $useSudo unzip $runtimeFile -d $runtimeFolder > /dev/null 2>&1
+    $useSudo unzip $runtimeFile -d $runtimeFolder > err.txt 2>&1
 
     [ -e "$runtimeFolder/[Content_Types].xml" ] && $useSudo rm "$runtimeFolder/[Content_Types].xml"
 
