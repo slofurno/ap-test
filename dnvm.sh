@@ -740,7 +740,7 @@ dnvm()
                 fi
                 return 0
             fi
-            echo "$versionOrAlias, $runtime, $arch, $__dnvm_current_os"
+            echo "$versionOrAlias, $runtime, $arch, $(__dnvm_current_os)"
             local runtimeFullName=$(__dnvm_requested_version_or_alias "$versionOrAlias" "$runtime" "$arch" "$(__dnvm_current_os)")
             local runtimeBin=$(__dnvm_locate_runtime_bin_from_full_name "$runtimeFullName")
             echo "bin : $runtimeBin"
