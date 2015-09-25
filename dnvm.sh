@@ -267,7 +267,7 @@ __dnvm_download() {
     fi
 
     local useSudo=
-    mkdir -p "$runtimeFolder" > err.txt 2>&1
+    mkdir -p "$runtimeFolder" >> err.txt 2>&1
     if [ ! -d $runtimeFolder ]; then
         if ! __dnvm_promptSudo $acceptSudo ; then
             useSudo=sudo
@@ -304,7 +304,7 @@ __dnvm_unpack() {
         return 1
     fi
 
-    $useSudo unzip $runtimeFile -d $runtimeFolder > err.txt 2>&1
+    $useSudo unzip $runtimeFile -d $runtimeFolder >> err.txt 2>&1
 
     [ -e "$runtimeFolder/[Content_Types].xml" ] && $useSudo rm "$runtimeFolder/[Content_Types].xml"
 
@@ -667,11 +667,11 @@ dnvm()
                   echo "$runtimeFullName already installed"
                 else
                   local useSudo=
-                  mkdir -p "$runtimeFolder" > err.txt 2>&1
+                  mkdir -p "$runtimeFolder" >> err.txt 2>&1
                   if [ ! -d $runtimeFolder ]; then
                      if ! __dnvm_promptSudo $acceptSudo ; then
                          useSudo=sudo
-                         sudo mkdir -p "$runtimeFolder" > err.txt 2>&1 || return 1
+                         sudo mkdir -p "$runtimeFolder" >> err.txt 2>&1 || return 1
                      else
                          return 1
                      fi
