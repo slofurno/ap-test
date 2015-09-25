@@ -13,5 +13,5 @@ install:
     - '%CYG_BASH% -lc "curl google.com"'
 
 build_script:
-  - '%CYG_BASH% -lc "cd $APPVEYOR_BUILD_FOLDER; source dnvm.sh; dnvm upgrade; mkdir $DNX_USER_HOME/alias; dnvm install -r coreclr -arch x64 latest -OS win -u; dnvm list; cd $DNX_USER_HOME; ls -A; cd runtimes; ls -A; cd dnx-coreclr-win-x64.1.0.0-beta8-15654; ls -A"'
+  - '%CYG_BASH% -lc "cd $APPVEYOR_BUILD_FOLDER; source dnvm.sh; dnvm upgrade; mkdir $DNX_USER_HOME/alias; dnvm install -r coreclr -arch x64 latest -OS win -u; dnvm list; cd $DNX_USER_HOME; ls -A; cd runtimes; ls -A; cd dnx-coreclr-win-x64.1.0.0-beta8-15654; ls -A; echo what; cd ..; ls -A"'
  
