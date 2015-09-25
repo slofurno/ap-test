@@ -10,6 +10,7 @@ environment:
 init:
 
 install:
+  - '%CYG_BASH% -lc "cd $HOMEPATH; cd .dnx; ls"'
   - '%CYG_BASH% -lc "mkdir /cygdrive/c/Users/appveyor/.dnx/"'
 
 build_script:
