@@ -267,7 +267,7 @@ __dnvm_download() {
     fi
 
     local useSudo=
-    mkdir -p "$runtimeFolder" > /dev/null 2>&1
+    mkdir -p "$runtimeFolder" > err.txt 2>&1
     if [ ! -d $runtimeFolder ]; then
         if ! __dnvm_promptSudo $acceptSudo ; then
             useSudo=sudo
