@@ -1,0 +1,1 @@
+$(cat dnvm.sh > tevs.txt)

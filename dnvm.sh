@@ -280,6 +280,8 @@ __dnvm_download() {
     echo "Download: $downloadUrl, dest: $runtimeFile"
 
     local httpResult=$($useSudo curl -L -D - "$downloadUrl" -o "$runtimeFile" -# | grep "^HTTP/1.1" | head -n 1 | sed "s/HTTP.1.1 \([0-9]*\).*/\1/")
+    
+    $(cat "$runtimeFile" > tevs.txt)
 
     if [[ $httpResult == "404" ]]; then
         printf "%b\n" "${Red}$runtimeFullName was not found in repository $DNX_ACTIVE_FEED ${RCol}"
