@@ -742,6 +742,7 @@ dnvm()
             fi
             echo "$versionOrAlias, $runtime, $arch, $(__dnvm_current_os)"
             local runtimeFullName=$(__dnvm_requested_version_or_alias "$versionOrAlias" "$runtime" "$arch" "$(__dnvm_current_os)")
+            echo "full name $runtimeFullName"
             local runtimeBin=$(__dnvm_locate_runtime_bin_from_full_name "$runtimeFullName")
             echo "bin : $runtimeBin"
             if [[ -z $runtimeBin ]]; then
