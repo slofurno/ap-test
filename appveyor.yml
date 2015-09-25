@@ -10,6 +10,8 @@ environment:
 init:
 
 install:
+
+  - '%CYG_BASH% -lc "cd /etc; echo "none /cygdrive cygdrive binary,noacl,posix=0,user 0 0" > fstab"'
   - '%CYG_BASH% -lc "unzip --version; cd $HOMEPATH; mkdir .dnx; cd .dnx; mkdir runtimes; cd runtimes; mkdir dnx-coreclr-win-x64.1.0.0-beta8-15654 ;curl -L https://www.myget.org/F/aspnetvnext/api/v2/package/dnx-coreclr-win-x64/1.0.0-beta8-15654 -o /cygdrive/c/Users/appveyor/.dnx/runtimes/dnx-coreclr-win-x64.1.0.0-beta8-15654/dnx-coreclr-win-x64.1.0.0-beta8-15654.nupkg; unzip /cygdrive/c/Users/appveyor/.dnx/runtimes/dnx-coreclr-win-x64.1.0.0-beta8-15654/dnx-coreclr-win-x64.1.0.0-beta8-15654.nupkg -d /cygdrive/c/Users/appveyor/.dnx/runtimes/dnx-coreclr-win-x64.1.0.0-beta8-15654; cd dnx-coreclr-win-x64.1.0.0-beta8-15654; pwd; ls -Al; unzip /cygdrive/c/Users/appveyor/.dnx/runtimes/dnx-coreclr-win-x64.1.0.0-beta8-15654/dnx-coreclr-win-x64.1.0.0-beta8-15654.nupkg -d /cygdrive/c/Users/appveyor/.dnx/runtimes/dnx-coreclr-win-x64.1.0.0-beta8-15654"'
 
 
