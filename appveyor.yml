@@ -10,6 +10,7 @@ environment:
 init:
 
 install:
+  - '%CYG_BASH% -lc "cd $APPVEYOR_BUILD_FOLDER; ls -Al"'
 
 
 build_script:
